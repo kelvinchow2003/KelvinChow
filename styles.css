@@ -47,3 +47,66 @@ h1{
 	top: 50%;
 	transform: translateY(-50%);
 }
+span{
+	position: absolute;
+	top: 0;
+	left: 15%;
+	width: 4px;
+	height: 4px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+	0 0 0 8px rgba(255, 255, 255, 0.1),
+	0 0 0 20 px rgba(255, 255, 255, 1);
+	animation: animate 3s linear infinite;
+}
+span::before{
+	content: '';
+	position: absolute;
+	top: 30%;
+	transform: translateY(-50%);
+	width: 300px;
+	height: 1px;
+	background: linear-gradient(90deg, #c8f6f7,
+	transparent);
+
+}
+@keyframes animate {
+	0%{
+		transform: rotate(200deg) translateX(0);
+		opacity: 1;
+	}
+	70%{
+		
+		opacity: 1;
+		
+	}
+	100%{transform: rotate(200deg) translateX(-1350px);
+		opacity: 0;
+	}
+	
+}
+
+span:nth-child(1)
+{
+	top: 2px;
+	left: 7%;
+	animation-delay: 10;
+	animation-duration: 3s;
+}
+span:nth-child(2)
+{
+	top: 5px;
+	left: 5%;
+	animation-delay: 1;
+	animation-duration: 4s;
+}
+
+span:nth-child(3)
+{
+	top: 2px;
+	left: 10%;
+	animation-delay: 2;
+	animation-duration: 3s;
+}
+
