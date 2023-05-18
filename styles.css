@@ -87,7 +87,7 @@ span::before{
 		opacity: 0.5;
 		
 	}
-	100%{transform: rotate(200deg) translateX(-1350px);
+	100%{transform: rotate(200deg) translateX(-75vw);
 		opacity: 0;
 	}
 	
@@ -145,7 +145,7 @@ span:nth-child(6)
 span:nth-child(7)
 {
 	top: 12px;
-	right: 70%;
+	right: 74%;
 	left: initial;
 	animation-delay: 1.2s;
 	animation-duration: 2.5s;
