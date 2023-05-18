@@ -1,9 +1,11 @@
+/*Kelvin Chow Kelvinchow2014@gmail.com*/
+/* defaults for the whole website */
 * {
 		margin: 0;
 		padding: 0;
 		font-family: 'open-sans', sans-serif;
 }	
-
+/* attributes for the main page*/
 .main{
 	width: 100%;
 	height: 100vh;
@@ -13,6 +15,7 @@
 	position: relative;
 	overflow: hidden;
 }
+/* colour and position of the headers*/
 .header{
 	color: rgb(255, 255, 255);
 	position: absolute;
@@ -21,11 +24,13 @@
 	transform: translateY(-50%);
 	z-index: 2;
 }
+/* size of the headers text*/
 h1{
 	font-size: 80px;
 	margin: 10px 0 30px;
 	line-height: 80px;
 }
+/* Diemnsions for the side bar that holds the social links */
 .navagation-bar{
 	width: 50px;
 	height: 100vh;
@@ -40,6 +45,7 @@ h1{
 	margin: 5px auto;
 	cursor: pointer;
 }
+/* Dimensions for the social media icons */
 .socials{
 	width: 50px;
 	text-align: center;
@@ -47,6 +53,7 @@ h1{
 	top: 50%;
 	transform: translateY(-50%);
 }
+/* Dimensions for the main object for the shooting stars */
 span{
 	position: absolute;
 	top: 0;
@@ -60,6 +67,7 @@ span{
 	0 0 0 20 px rgba(255, 255, 255, 0.1);
 	animation: animate 3s linear infinite;
 }
+/* The trail for the social links */
 span::before{
 	content: '';
 	position: absolute;
@@ -71,6 +79,7 @@ span::before{
 	transparent);
 
 }
+/* Directions for the stars */
 @keyframes animate {
 	0%{
 		transform: rotate(200deg) translateX(0);
@@ -93,6 +102,7 @@ span::before{
 	
 }
 
+/* a variety of intial star */
 span:nth-child(1)
 {
 	top: 10px;
@@ -101,6 +111,7 @@ span:nth-child(1)
 	animation-delay: 0;
 	animation-duration: 3s;
 }
+/* a variety of intial star */
 span:nth-child(2)
 {
 	top: 10px;
@@ -109,7 +120,7 @@ span:nth-child(2)
 	animation-delay: -0.2s;
 	animation-duration: 3s;
 }
-
+/* a variety of intial star */
 span:nth-child(3)
 {
 	top: 12px;
@@ -118,6 +129,7 @@ span:nth-child(3)
 	animation-delay: 0.2s;
 	animation-duration: 2.5s;
 }
+/* a variety of intial star */
 span:nth-child(4)
 {
 	top: 8px;
@@ -126,6 +138,7 @@ span:nth-child(4)
 	animation-delay: 0.4s;
 	animation-duration: 3s;
 }
+/* a variety of intial star */
 span:nth-child(5)
 {
 	top: 8px;
@@ -134,14 +147,16 @@ span:nth-child(5)
 	animation-delay: 0.8s;
 	animation-duration: 3s;
 }
+/* a variety of intial star */
 span:nth-child(6)
 {
 	top: 8px;
-	right: 85%;
+	right: 85%;	
 	left: initial;
 	animation-delay: 0.8s;
 	animation-duration: 3s;
 }
+/* a variety of intial star */
 span:nth-child(7)
 {
 	top: 12px;
@@ -150,7 +165,7 @@ span:nth-child(7)
 	animation-delay: 1.2s;
 	animation-duration: 2.5s;
 }
-
+/* a variety of intial star */
 span:nth-child(8)
 {
 	top: 8px;
@@ -159,6 +174,7 @@ span:nth-child(8)
 	animation-delay: 1.4s;
 	animation-duration: 3s;
 }
+/* a variety of intial star */
 span:nth-child(9)
 {
 	top: 8px;
@@ -167,6 +183,7 @@ span:nth-child(9)
 	animation-delay: 1.8s;
 	animation-duration: 3s;
 }
+/* a variety of intial star */
 span:nth-child(10)
 {
 	top: 8px;
@@ -175,6 +192,7 @@ span:nth-child(10)
 	animation-delay: 1.8s;
 	animation-duration: 3s;
 }
+/* a variety of intial star */
 span:nth-child(11)
 {
 	top: 12px;
@@ -183,6 +201,7 @@ span:nth-child(11)
 	animation-delay: 1.2s;
 	animation-duration: 2.5s;
 }
+/* a variety of intial star */
 span:nth-child(12)
 {
 	top: 8px;
@@ -191,6 +210,7 @@ span:nth-child(12)
 	animation-delay: 1.4s;
 	animation-duration: 3s;
 }
+/* a variety of intial star */
 span:nth-child(13)
 {
 	top: 8px;
