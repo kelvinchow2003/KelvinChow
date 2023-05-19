@@ -13,7 +13,8 @@
 	background-size: cover;
 	background-position: center;
 	position: relative;
-	overflow: hidden;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 /* colour and position of the headers*/
 .header{
@@ -53,7 +54,9 @@ h1{
 	top: 50%;
 	transform: translateY(-50%);
 }
-/* Dimensions for the main object for the shooting stars */
+/* Dimensions for the main object for the shooting stars 
+When the page 
+is shrunk down a lot it causes the star to start from inside the building*/
 span{
 	position: absolute;
 	top: 0;
