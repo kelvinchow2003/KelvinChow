@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<title>Kelvin Chow</title>
+<head>
+	
+  <link rel="stylesheet" href="styles.css">
+ <style>
+  </style>
+  <script>
+	$(window).scroll(function() {
+	var scrollDistance = $(window).scrollTop();
+	var containerOffset = $('.container').offset().top;
+	var windowHeight = $(window).height();
+
+	if (scrollDistance >= containerOffset - windowHeight + 100) { /* Adjust the offset as needed */
+		$('.container').addClass('fade-in');
+		$('.container .text').addClass('fade-in-text');
+	}
+});
+  </script>
+
+</head>
+
+<body>
+	<div class="main">
+		
+		<div class="header">
+			<!-- Main header-->
+			<h1>Kelvin Chow</h1>
+		</div>
+		 <!-- Side bar-->
+		<div class="navagation-bar">
+			<!-- The social icons-->
+			<div class="socials">
+				<a href="https://www.linkedin.com/in/kelchow/" target="_blank">
+					<img src="images/linkedin2.png" alt="Click to view my Linkedin page.">
+				</a>
+				<a href="https://github.com/kelvinchow2003" target="_blank">
+					<img src="images/github2.png" alt="Click to view my github page.">
+				</a>
+				<a href="mailto:Kelvinchow2014@gmail.com" target="_blank">
+					<img src="images/mail2.jpg" alt="Click to contact me">
+				</a>
+				<a href="images/Resume - Kelvin Chow.docx.pdf" target="_blank">
+					<img src="images/resume1.jpg" alt="Click to view my resume">
+				</a>
+			</div>
+		</div>
+		<!-- The shooting stars-->
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	
+</body>
+<section>
+	
+	<div class="header2">
+		<h2>About me</h2>
+	</div>
+	<div class="rectangle">
+		<div class="text">
+			<p>NDefine the animations using Keyframes. The transform style attribute can bring a dynamic feel to your page and it can be added here. Another attribute you can add is transition, which is the time it takes for the element to load completely, but the 1s in the animation attribute achieve the same result.</p>
+		</div>
+	</div>
+	<div class="navagation-bar2">
+		<!-- The social icons-->
+		<div class="socials">
+			<a href="https://www.linkedin.com/in/kelchow/" target="_blank">
+				<img src="images/linkedin2.png" alt="Click to view my Linkedin page.">
+			</a>
+			<a href="https://github.com/kelvinchow2003" target="_blank">
+				<img src="images/github2.png" alt="Click to view my github page.">
+			</a>
+			<a href="mailto:Kelvinchow2014@gmail.com" target="_blank">
+				<img src="images/mail2.jpg" alt="Click to contact me">
+			</a>
+			<a href="images/Resume - Kelvin Chow.docx.pdf" target="_blank">
+				<img src="images/resume1.jpg" alt="Click to view my resume">
+			</a>
+		</div>
+	</div>
+</section>
+</html>
