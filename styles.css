@@ -16,6 +16,29 @@
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+.smoke{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 2;
+}
+.smoke img{
+	position: absolute;
+	bottom: 0;
+	max-width: 100%;
+	animation: animate_smoke calc(8s * var(--i)) linear infinite;
+}
+@keyframes animate_smoke {
+	0%{
+		transform: translateX(-100%);
+	}
+	100%{
+		transform: translateX(100%);
+	}
+}
 /* colour and position of the headers*/
 .header{
 	color: rgb(255, 255, 255);
@@ -25,6 +48,8 @@
 	transform: translateY(-50%);
 	z-index: 2;
 }
+
+
 /* size of the headers text*/
 h1{
 	font-size: 80px;
@@ -36,6 +61,11 @@ h2{
 	margin: 10px 0 30px;
 	line-height: 80px;
 }
+p{
+	font-size: 30px;
+	margin: 10px 0 30px;
+	line-height: 30px;
+}
 /* Diemnsions for the side bar that holds the social links */
 .navagation-bar{
 	width: 50px;
@@ -44,6 +74,7 @@ h2{
 	position: absolute;
 	right: 0;
 	top: 0;
+	z-index: 3;
 }
 .navagation-bar2{
 	width: 50px;
@@ -70,9 +101,61 @@ h2{
 /* Dimensions for the main object for the shooting stars 
 When the page 
 is shrunk down a lot it causes the star to start from inside the building*/
+
+
+.arrows {
+	width: 15%;
+	height: 10%;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+	z-index: 20;
+  }
+
+  .arrows path {
+	stroke: #ffffff;
+	fill: transparent;
+	stroke-width: 1px;  
+	animation: arrow 1.7s infinite;
+	-webkit-animation: arrow 1.7s infinite; 
+  }
+  
+  @keyframes arrow
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  @-webkit-keyframes arrow /*Safari and Chrome*/
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  .arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a3 { 
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+  }
+
+
 span{
 	position: absolute;
-	top: 0;
+	top: -10px;
 	left: 15%;
 	width: 4px;
 	height: 4px;
@@ -99,7 +182,7 @@ span::before{
 @keyframes animate {
 	0%{
 		transform: rotate(200deg) translateX(0);
-		opacity: 0.2;
+		opacity: 0;
 	}
 	30%{
 		opacity: 0.7;
@@ -244,58 +327,49 @@ section{
 	position: relative;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	
   }
-  section .container {
-	margin: 100px;
+  .header2{
+	color: rgb(255, 255, 255);
+	position: absolute;
+	top: 40%;
+	left: 8%;
+	transform: translateY(-50%);
+	z-index: 2;
+	opacity: 0;
+	transition: opacity 1s ease;
+	
+}
+  .rectangle {
+	opacity: 0;
+	width: 70%;
+	height: 37%;
+	background-color:rgba(34, 79, 132, 0.2);
+	border-image: linear-gradient(#000729, #061627) 100px;
+	border-style: solid;
+	padding: 10px;
+	position: absolute;
+	top: 65%;
+	left: 15%;
+	transform: translateY(-50%);
+	z-index: 2;
+	overflow-wrap: break-word;
+	transition: opacity 1s ease;
   }
+  .text{
+	color: rgb(255, 255, 255);
+	z-index: 3;
+	opacity: 100%;
+}
+.rectangle.visible {
+	opacity: 1;
+}
+.header2.visible {
+	opacity: 1;
+}
+
   section h1 {
 	font-size: 3rem;
 	margin: 20px;
   }
-  .reveal {
-	position: relative;
-	opacity: 0;
-  }
-  .reveal.active {
-	opacity: 1;
-  }
-  .active.fade-bottom {
-	animation: fade-bottom 1s ease-in;
-  }
-  .active.fade-left {
-	animation: fade-left 1s ease-in;
-  }
-  .active.fade-right {
-	animation: fade-right 1s ease-in;
-  }
-  @keyframes fade-bottom {
-	0% {
-	  transform: translateY(50px);
-	  opacity: 0;
-	}
-	100% {
-	  transform: translateY(0);
-	  opacity: 1;
-	}
-  }
-  @keyframes fade-left {
-	0% {
-	  transform: translateX(-100px);
-	  opacity: 0;
-	}
-	100% {
-	  transform: translateX(0);
-	  opacity: 1;
-	}
-  }
-  @keyframes fade-right {
-	0% {
-	  transform: translateX(100px);
-	  opacity: 0;
-	}
-	100% {
-	  transform: translateX(0);
-	  opacity: 1;
-	}
-  }
-  
+ 

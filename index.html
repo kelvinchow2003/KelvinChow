@@ -4,21 +4,12 @@
 <head>
 	
   <link rel="stylesheet" href="styles.css">
- <style>
-  </style>
-  <script>
-	$(window).scroll(function() {
-	var scrollDistance = $(window).scrollTop();
-	var containerOffset = $('.container').offset().top;
-	var windowHeight = $(window).height();
-
-	if (scrollDistance >= containerOffset - windowHeight + 100) { /* Adjust the offset as needed */
-		$('.container').addClass('fade-in');
-		$('.container .text').addClass('fade-in-text');
+  <script src="transformations.js"></script>
+  <style>
+	.brightness-decreased{
+		filter:brightness(0.6)
 	}
-});
-  </script>
-
+  </style>
 </head>
 
 <body>
@@ -46,6 +37,13 @@
 				</a>
 			</div>
 		</div>
+		<div class="smoke">
+			<img src="images/cloud2.png" class="brightness-decreased" style="--i:1;">
+			<img src="images/cloud2.png" class="brightness-decreased" style="--i:2;">
+			<img src="images/cloud3.png" class="brightness-decreased" style="--i:3;">
+			<img src="images/cloud4.png" class="brightness-decreased" style="--i:4;">
+			<img src="images/cloud5.png" class="brightness-decreased" style="--i:5;">
+		</div>
 		<!-- The shooting stars-->
 		<span></span>
 		<span></span>
@@ -57,6 +55,12 @@
 		<span></span>
 		<span></span>
 		<span></span>
+		<!-- triangles-->
+		<svg class="arrows">
+			<path class="a1" d="M0 0 L30 32 L60 0"></path>
+			<path class="a2" d="M0 20 L30 52 L60 20"></path>
+			<path class="a3" d="M0 40 L30 72 L60 40"></path>
+		  </svg>
 	</div>
 	
 </body>
@@ -67,7 +71,7 @@
 	</div>
 	<div class="rectangle">
 		<div class="text">
-			<p>NDefine the animations using Keyframes. The transform style attribute can bring a dynamic feel to your page and it can be added here. Another attribute you can add is transition, which is the time it takes for the element to load completely, but the 1s in the animation attribute achieve the same result.</p>
+			<p>testing</p>
 		</div>
 	</div>
 	<div class="navagation-bar2">
