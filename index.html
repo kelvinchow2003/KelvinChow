@@ -14,10 +14,11 @@
         transform: scaleY(-1);
     }
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<div class="main">
+	<div id="Main"class="main">
 		
 		<div class="header">
 			<!-- Main header-->
@@ -41,6 +42,7 @@
 				</a>
 			</div>
 		</div>
+		<!--
 		<div class="smoke">
 			<img src="images/cloud1.png" class="brightness-decreased" style="--i:1;">
 			<img src="images/cloud2.png" class="brightness-decreased" style="--i:2;">
@@ -48,6 +50,7 @@
 			<img src="images/cloud4.png" class="brightness-decreased" style="--i:4;">
 			<img src="images/cloud5.png" class="brightness-decreased" style="--i:5;">
 		</div>
+		-->
 		<!-- The shooting stars-->
 		<span></span>
 		<span></span>
@@ -60,14 +63,17 @@
 		<span></span>
 		<span></span>
 		<!-- triangles-->
+		<button onclick="open_about()">
 		<svg class="arrows">
 			<path class="a1" d="M0 0 L30 32 L60 0"></path>
 			<path class="a2" d="M0 20 L30 52 L60 20"></path>
 			<path class="a3" d="M0 40 L30 72 L60 40"></path>
 		  </svg>
+		</button>
 	</div>
 	
 </body>
+<!--
 <section class="section-smoke_area">
 	<div class="smoke">
 		<img src="images/cloud1.png" class="brightness-decreased" style="--i:1;">
@@ -83,7 +89,21 @@
 			<img src="images/cloud9.png" class="brightness-decreased" style="--i:4;">
 			<img src="images/cloud8.png" class="brightness-decreased" style="--i:5;">
 	</div>
+	<div class="smoke2-1">
+		<img src="images/cloud9.png" class="brightness-decreased" style="--i:1;">
+		<img src="images/cloud8.png" class="brightness-decreased" style="--i:2;">
+		<img src="images/cloud8.png" class="brightness-decreased" style="--i:3;">
+		<img src="images/cloud9.png" class="brightness-decreased" style="--i:4;">
+		<img src="images/cloud8.png" class="brightness-decreased" style="--i:5;">
+</div>
 	<div class="smoke3">
+		<img src="images/cloud8.png" class="brightness-decreased" style="--i:1;">
+		<img src="images/cloud8.png" class="brightness-decreased" style="--i:2;">
+		<img src="images/cloud9.png" class="brightness-decreased" style="--i:3;">
+		<img src="images/cloud8.png" class="brightness-decreased" style="--i:4;">
+		<img src="images/cloud9.png" class="brightness-decreased" style="--i:5;">
+	</div>
+	<div class="smoke3-1">
 		<img src="images/cloud8.png" class="brightness-decreased" style="--i:1;">
 		<img src="images/cloud8.png" class="brightness-decreased" style="--i:2;">
 		<img src="images/cloud9.png" class="brightness-decreased" style="--i:3;">
@@ -102,12 +122,40 @@
 		<img src="images/flipcloud4.png" class="brightness-decreased" style="--i:4;">
 		<img src="images/flipcloud5.png" class="brightness-decreased" style="--i:5;">
 	</div>
+	<div class="smoke5">
+		<img src="images/flipcloud1.png" class="brightness-decreased" style="--i:1;">
+		<img src="images/flipcloud2.png" class="brightness-decreased" style="--i:2;">
+		<img src="images/flipcloud3.png" class="brightness-decreased" style="--i:3;">
+		<img src="images/flipcloud4.png" class="brightness-decreased" style="--i:4;">
+		<img src="images/flipcloud5.png" class="brightness-decreased" style="--i:5;">
+	</div>
 </section>	
+-->
 
 
-
-<section>
-	
+<section id="About"class="section_about">
+	<!--
+	<div class="smoke4-small">
+		<img src="images/flipcloud1.png" class="brightness-decreased" style="--i:1;">
+		<img src="images/flipcloud2.png" class="brightness-decreased" style="--i:2;">
+		<img src="images/flipcloud5.png" class="brightness-decreased" style="--i:5;">
+	</div>
+	<div class="smoke5-1">
+		<img src="images/flipcloud1.png" class="brightness-decreased" style="--i:1;">
+		<img src="images/flipcloud2.png" class="brightness-decreased" style="--i:2;">
+		<img src="images/flipcloud5.png" class="brightness-decreased" style="--i:5;">
+	</div>
+	-->
+	<button onclick="open_main()">
+		<!--<svg class="arrows1">
+			<path class="a1" d="M0 0 L30 32 L60 0"></path>
+			<path class="a2" d="M0 20 L30 52 L60 20"></path>
+			<path class="a3" d="M0 40 L30 72 L60 40"></path>
+		  </svg>
+		-->
+		
+		</button>
+		<div class="fish"></div>
 	<div class="header2">
 		<h2>About me</h2>
 	</div>

@@ -62,6 +62,24 @@
 	animation: animate_smoke2 calc(8s * var(--i)) linear infinite;
 	transform: rotate(180deg); 
 }
+.smoke2-1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 2;
+}
+
+
+.smoke2-1 img{
+	position: absolute;
+	bottom: 0%;
+	max-width: 100%;
+	animation: animate_smoke_right calc(8s * var(--i)) linear infinite;
+	transform: rotate(180deg); 
+}
 .smoke3{
 	position: absolute;
 	top: 0;
@@ -76,6 +94,22 @@
 	top: 0;
 	max-width: 100%;
 	animation: animate_smoke calc(8s * var(--i)) linear infinite;
+	
+}
+.smoke3-1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 2;
+}
+.smoke3-1 img{
+	position: absolute;
+	top: 0;
+	max-width: 100%;
+	animation: animate_smoke_right calc(8s * var(--i)) linear infinite;
 	
 }
 .smoke4{
@@ -95,6 +129,65 @@
 	animation: animate_smoke calc(8s * var(--i)) linear infinite;
 	transform: scaleX(-1); /* Flip the image horizontally */
   }
+  .smoke4-small{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40%;
+	overflow: hidden;
+	z-index: 2;
+}
+.smoke4-small img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	animation: animate_smoke calc(12s * var(--i)) linear infinite;
+	transform: scaleX(-1); /* Flip the image horizontally */
+  }
+  .smoke5{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 2;
+}
+.smoke5 img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	max-width: 100%;
+	animation: animate_smoke_right calc(8s * var(--i)) linear infinite;
+	transform: scaleX(-1); /* Flip the image horizontally */
+  }
+  .smoke5-1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40%;
+	overflow: hidden;
+	z-index: 2;
+}
+.smoke5-1 img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	max-width: 100%;
+	animation: animate_smoke_right calc(12s * var(--i)) linear infinite;
+	transform: scaleX(-1); /* Flip the image horizontally */
+  }
+  @keyframes animate_smoke_right {
+	0%{
+		transform: translateX(100%);
+	}
+	100%{
+		transform: translateX(-100%);
+	}
+}
 @keyframes animate_smoke {
 	0%{
 		transform: translateX(-100%);
@@ -129,9 +222,9 @@ h1{
 	line-height: 80px;
 }
 h2{
-	font-size: 80px;
+	font-size: 60px;
 	margin: 10px 0 30px;
-	line-height: 80px;
+	line-height: 60px;
 }
 p{
 	font-size: 30px;
@@ -179,17 +272,19 @@ is shrunk down a lot it causes the star to start from inside the building*/
 	position: absolute;
 	left: 50%;
 	margin-left: -30px;
-	bottom: 20px;
+	bottom: 5%;
 	z-index: 20;
+	cursor: pointer;
   }
 
   .arrows path {
 	stroke: #ffffff;
 	fill: transparent;
 	stroke-width: 1px;  
-	animation: arrow 1.7s infinite;
-	-webkit-animation: arrow 1.7s infinite; 
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
   }
+  
   
   @keyframes arrow
   {
@@ -199,7 +294,7 @@ is shrunk down a lot it causes the star to start from inside the building*/
   100% {opacity:0}
   }
   
-  @-webkit-keyframes arrow /*Safari and Chrome*/
+  @-webkit-keyframes arrow
   {
   0% {opacity:0}
   40% {opacity:1}
@@ -209,18 +304,55 @@ is shrunk down a lot it causes the star to start from inside the building*/
   
   .arrows path.a1 {
 	animation-delay:-1s;
-	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+	-webkit-animation-delay:-1s; 
   }
   
   .arrows path.a2 {
 	animation-delay:-0.5s;
-	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+	-webkit-animation-delay:-0.5s; 
   }
   
   .arrows path.a3 { 
 	animation-delay:0s;
-	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+	-webkit-animation-delay:0s; 
   }
+  .arrows1 {
+	width: 15%;
+	height: 15%;
+	position: absolute;
+	right: 50%;
+	margin-right: -30px;
+	top: 5%;
+	
+	z-index: 20;
+	cursor: pointer;
+	transform: rotate(180deg);
+	
+  }
+
+  .arrows1 path {
+	stroke: #ffffff;
+	fill: transparent;
+	stroke-width: 1px;  
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+  }
+  
+  .arrows1 path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; 
+  }
+  
+  .arrows1 path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s;
+  }
+  
+  .arrows1 path.a3 { 
+	animation-delay:0s;
+	-webkit-animation-delay:0s; 
+  }
+
 
 
 span{
@@ -391,7 +523,7 @@ span:nth-child(13)
 .section-smoke_area{
 	width: 100%;
 	height: 100vh;
-	background-image: url(images/smokebackground.PNG);
+	background-image: url(images/filter.PNG);
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -399,17 +531,52 @@ span:nth-child(13)
 	overflow-x: hidden;
 
 }
-section{
+.section_about{
 	width: 100%;
 	height: 100vh;
-	background-image: url(images/background2.jpg);
+	background-image: url(images/background.jpg);
 	background-size: cover;
 	background-position: center;
 	position: relative;
 	overflow-y: scroll;
 	overflow-x: hidden;
+}
+.fish {
+	width: 100px;
+	height: 50px;
+	background-color: rgb(255, 255, 255);
+	position: relative;
+	animation: swim 5s linear infinite;
+}
+@keyframes swim {
+	0% {
+	  left: 0;
+	  transform: rotate(0deg);
+	}5% {
+		top: 5%;
+		left: 5%;
+		transform: rotate(0deg);
+	  }
 	
+	  
+	50% {
+		top: 20%;
+	  left: 50%;
+	  transform: rotate(20deg);
+	}
+	75% {
+		top: 20%;
+	  left: 10%;
+	  transform: rotate(20deg);
+	}
+	100% {
+		top: 10%;
+	  left: 100%;
+	  transform: rotate(0deg);
+	}
   }
+	  
+  
   .header2{
 	color: rgb(255, 255, 255);
 	position: absolute;
@@ -425,9 +592,10 @@ section{
 	opacity: 0;
 	width: 70%;
 	height: 37%;
-	background-color:rgba(34, 79, 132, 0.2);
-	border-image: linear-gradient(#000729, #061627) 100px;
+	background-color:transparent;
 	border-style: solid;
+	border-image: linear-gradient(#ffffff, #ffffff) 100px;
+	
 	padding: 10px;
 	position: absolute;
 	top: 65%;
